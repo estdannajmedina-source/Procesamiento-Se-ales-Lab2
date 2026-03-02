@@ -46,6 +46,7 @@ h = np.array([5,6,0,0,9,2,3,5,6,0,0,8,9,4])
 x = np.array([1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9])
 ```
 La convolucion se realizó mediante:
+
 ```python
 y = np.convolve(x, h)
 ```
@@ -68,10 +69,13 @@ el proceso consiste en invertir la señal ℎ[n], desplazarla sobre x[n], multip
   <em> Formula longitud</em> 
 </p>
 Para mostrar la secuencia resultante de forma organizada se utilizó:
+
 ```python
 print(", ".join(map(str, y)))
 ```
 Esto convierte cada elemento del arreglo en texto y los muestra separados por comas, facilitando la comparación con el cálculo manual.
-Se creó el vector ```python n = np.arange(len(y)) ```
+Se creó el vector 
+
+```python n = np.arange(len(y)) ```
 
 Este vector representa los valores del eje horizontal n, correspondientes a cada muestra de la señal resultante.
