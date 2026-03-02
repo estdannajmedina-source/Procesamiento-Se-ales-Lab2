@@ -75,3 +75,5 @@ print(", ".join(map(str, y)))
 ```
 Esto convierte cada elemento del arreglo en texto y los muestra separados por comas, facilitando la comparación con el cálculo manual.
 Se creó el vector  `n = np.arange(len(y))` para representar los valores n del eje horizontal, correspondientes a cada muestra de la señal resultante.
+
+Se utilizó la función `stem()` para graficar la señal discreta y representa cada muestra como un impulso vertical y `figsize=(14,4)` amplía el eje horizontal para mejorar la visualización.
