@@ -37,8 +37,21 @@ En esta sección se calculó la convolución entre una señal de entrada y un si
 <p align="center">
   <em>Convolucion Parte A </em> 
 </p>
-Posteriormente en Python, incluyendo la representación gráfica y secuencial de la señal resultante, esto se elaboro mediante,
+Posteriormentese implementó el procedimiento en Python con el objetivo de:
+*Verificar los resultados obtenidos manualmente.
+*Automatizar el cálculo de la operación.
+*Representar gráficamente la señal resultante.
+
+Se definieron dos señales discretas:
+x[n] → Señal de entrada.
+h[n] → Respuesta al impulso del sistema.
+Ambas señales se almacenan como arreglos (array) de NumPy, lo que permite realizar operaciones matemáticas de forma eficiente.
 ```python
-directory = r"C:/Users/Usuario/Downloads/Procesamiento de señales/LAB 1/"
-record = wfdb.rdsamp(os.path.join(directory, "ath_001"))
+h = np.array([5,6,0,0,9,2,3,5,6,0,0,8,9,4])
+x = np.array([1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9])
 ```
+La convolucion se realizó mediante:
+```python
+y = np.convolve(x, h)
+```
+
