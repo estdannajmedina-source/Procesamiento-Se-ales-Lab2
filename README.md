@@ -26,10 +26,10 @@ Este informe presenta el desarrollo y análisis de la convolución, correlación
 ---
 ## Metodología
 El desarrollo del laboratorio se dividió en tres partes principales.
-En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturo y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la Transformada de Fourier.
+En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de fourier.
 
 ### Parte A
-En esta sección se calculó la convolución entre una señal de entrada y un sistema discreto definidos a partir de datos personales. El procedimiento se realizó de forma manual mediante sumatorias.
+En esta parte se calculó la convolución entre una señal de entrada y un sistema discreto definidos a partir de datos personales. El procedimiento se realizó de forma manual mediante sumatorias.
 <p align="center">
   <img src="PARTE-A-MANUAL.png" width="700">
 </p>
@@ -37,15 +37,10 @@ En esta sección se calculó la convolución entre una señal de entrada y un si
 <p align="center">
   <em>Convolucion Parte A </em> 
 </p>
-Posteriormentese implementó el procedimiento en Python con el objetivo de:
-*Verificar los resultados obtenidos manualmente.
-*Automatizar el cálculo de la operación.
-*Representar gráficamente la señal resultante.
-
+Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
 Se definieron dos señales discretas:
-x[n] → Señal de entrada.
-h[n] → Respuesta al impulso del sistema.
-Ambas señales se almacenan como arreglos (array) de NumPy, lo que permite realizar operaciones matemáticas de forma eficiente.
+x[n] y h[n], Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente.
+
 ```python
 h = np.array([5,6,0,0,9,2,3,5,6,0,0,8,9,4])
 x = np.array([1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9])
@@ -54,4 +49,22 @@ La convolucion se realizó mediante:
 ```python
 y = np.convolve(x, h)
 ```
+
+Esta operacion se refiere a
+
+<p align="center">
+  <img src="formulaconvolucion.png" width="700">
+</p>
+
+<p align="center">
+  <em> Formula Convolucion</em> 
+</p>
+el proceso consiste en invertir la señal ℎ[n], desplazarla sobre x[n], multiplicar punto a punto y sumar los productos obtenidos. El resultado es una nueva señal  y[n], cuya longitud está dada por
+<p align="center">
+  <img src="formulal.png" width="700">
+</p>
+
+<p align="center">
+  <em> Formula longitud</em> 
+</p>
 
