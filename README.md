@@ -67,4 +67,11 @@ el proceso consiste en invertir la señal ℎ[n], desplazarla sobre x[n], multip
 <p align="center">
   <em> Formula longitud</em> 
 </p>
+Para mostrar la secuencia resultante de forma organizada se utilizó:
+```python
+print(", ".join(map(str, y)))
+```
+Esto convierte cada elemento del arreglo en texto y los muestra separados por comas, facilitando la comparación con el cálculo manual.
+Se creó el vector ```python n = np.arange(len(y)) ```
 
+Este vector representa los valores del eje horizontal n, correspondientes a cada muestra de la señal resultante.
