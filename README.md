@@ -74,8 +74,4 @@ Para mostrar la secuencia resultante de forma organizada se utilizó:
 print(", ".join(map(str, y)))
 ```
 Esto convierte cada elemento del arreglo en texto y los muestra separados por comas, facilitando la comparación con el cálculo manual.
-Se creó el vector 
-
-```python n = np.arange(len(y)) ```
-
-Este vector representa los valores del eje horizontal n, correspondientes a cada muestra de la señal resultante.
+Se creó el vector  `n = np.arange(len(y))` para representar los valores n del eje horizontal, correspondientes a cada muestra de la señal resultante.
