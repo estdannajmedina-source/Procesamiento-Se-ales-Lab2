@@ -37,6 +37,7 @@ En esta parte se calculó la convolución entre una señal de entrada y un siste
 <p align="center">
   <em>Convolucion Parte A </em> 
 </p>
+
 Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
 Se definieron dos señales discretas:
 x[n] y h[n], Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente.
@@ -95,7 +96,6 @@ x1 = np.cos(w*n)
 x2 = np.sin(w*n)
 ```
 Estas expresiones corresponden matemáticamente a:
-<div align="center">
 
 $$
 x_1[n] = \cos(2\pi 100 n T_s)
