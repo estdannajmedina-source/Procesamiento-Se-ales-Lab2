@@ -95,5 +95,10 @@ x1 = np.cos(w*n)
 x2 = np.sin(w*n)
 ```
 Estas expresiones corresponden matemáticamente a:
-$$x_1[n] = \cos(2\pi 100 n T_s)$$
-$$x_2[n] = \sin(2\pi 100 n T_s)$$
+$$
+x_1[n] = \cos(2\pi 100 n T_s)
+$$
+
+$$
+x_2[n] = \sin(2\pi 100 n T_s)
+$$
