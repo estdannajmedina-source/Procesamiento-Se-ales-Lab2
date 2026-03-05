@@ -148,6 +148,7 @@ $$
 </p>
 
 
+
 <p align="center">
 <img src="XN2.png" width="700">
 </p>
@@ -170,7 +171,6 @@ Finalmente, para visualizar el comportamiento de la correlación cruzada se util
 <p align="center">
   <img src="CORRELACION.png" width="700">
 </p>
-
 <p align="center">
    <em>Correlación cruzada r<sub>x₁x₂</sub>[k]</em>
 </p>
