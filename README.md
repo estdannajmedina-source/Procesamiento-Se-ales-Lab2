@@ -111,5 +111,5 @@ $$
 </p>
 
 <p align="center">
-  <em>Señal discreta $$X_1[n]$$ </em> 
+<b>Figura 1. Señal discreta $x_1[n]$</b>
 </p>
