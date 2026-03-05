@@ -35,7 +35,7 @@ $$h(n) =[5,6,0,0,9,2,3,5,6,0,0,8,9,4]$$
 
 $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
 <p align="center">
-  <img src="señales.png" width="700">
+  <img src="señales.jpeg" width="700">
 </p>
 
 <p align="center">
@@ -43,19 +43,20 @@ $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
 </p>
 
 
-En esta parte del laboratorio se analizó la respuesta de un sistema discreto mediante la operación de convolución entre dos señales discretas. Para ello se definio la señal h[n], construida a partir de los dígitos de los dos códigos, y la señal x[n], formada por los dígitos de las dos cédulas.
-
-Estas secuencias representan valores discretos de una señal en el tiempo y permiten estudiarla cómo un sistema lineal e invariante en el tiempo.
-
-Inicialmente se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k].$$ Este procedimiento consiste en invertir la señal del sistema, desplazarla a lo largo de la señal de entrada y realizar multiplicaciones entre los valores que coinciden en cada desplazamiento. Posteriormente se suman estos productos para obtener cada uno de los valores de la señal resultante y[n].
+Posteriormente, se determinó la longitud de las señales involucradas en el sistema. La señal h[n] corresponde a la respuesta del sistema y está formada por 14 muestras, mientras que la señal x[n] corresponde a la señal de entrada y contiene 20 muestras. A partir de estos valores se calculó la longitud de la señal resultante y[n] De esta forma se obtuvo que la señal resultante tiene 33 muestras. Se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k].$$ Este procedimiento consiste en calcular la convolución de forma manual utilizando una tabla. En esta tabla se organizaron los desplazamientos de la señal h[n] respecto a la señal x[n], realizando las multiplicaciones entre los valores correspondientes en cada posición. Posteriormente se sumaron los productos obtenidos en cada desplazamiento para calcular cada valor de la señal resultante y[n]. Este método permitió visualizar de manera ordenada el proceso de convolución y facilitar el cálculo de cada término de la secuencia resultante. Tambien se grafico la señal y[n] resultante.
 <p align="center">
-  <img src="PARTE-A-MANUAL.png" width="700">
+  <img src="PARTE-A-MANUAL.jpeg" width="700">
 </p>
-
 <p align="center">
   <em>Convolucion Parte A </em> 
 </p>
 
+<p align="center">
+  <img src="GRAFICA-FINAL.jpeg" width="700">
+</p>
+<p align="center">
+  <em>GRAFICA A MANO</em> 
+</p>
 Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
 Se definieron dos señales discretas:
 x[n] y h[n], Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente.
