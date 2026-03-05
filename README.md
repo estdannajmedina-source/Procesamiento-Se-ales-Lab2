@@ -101,7 +101,7 @@ Para mostrar la secuencia resultante de forma organizada se utilizó:
 print(", ".join(map(str, y)))
 ```
 <p align="center">
-  <img src="L.png" width="700">
+  <img src="L .png" width="700">
 </p>
 
 <p align="center">
