@@ -59,39 +59,54 @@ Posteriormente, se determinó la longitud de las señales involucradas en el sis
 </p>
 
 Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
-Se definieron dos señales discretas en phyton:
-x[n] y h[n], Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente.
+Se definieron dos señales discretas en phyton: x[n] y h[n], Ambas señales se almacenan como arreglos (array),lo que permite realizar operaciones matemáticas de manera eficiente y ademas se graficaron.
 
 ```python
 h = np.array([5,6,0,0,9,2,3,5,6,0,0,8,9,4])
 x = np.array([1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9])
 ```
+<p align="center">
+  <img src="HN.png" width="700">
+</p>
+<p align="center">
+  <em>H[n]</em> 
+</p>
+
+<p align="center">
+  <img src="XN.png" width="700">
+</p>
+
+<p align="center">
+  <em>X[n]</em> 
+</p>
+
 La convolucion se realizó mediante:
 
 ```python
 y = np.convolve(x, h)
 ```
+y se procedio a graficar
 
 <p align="center">
-  <img src="formulaconvolucion.png" width="700">
-</p>
-
-<p align="center">
-  <em> Formula Convolucion</em> 
-</p>
-el proceso consiste en invertir la señal ℎ[n], desplazarla sobre x[n], multiplicar punto a punto y sumar los productos obtenidos. El resultado es una nueva señal  y[n], cuya longitud está dada por
-<p align="center">
-  <img src="formulal.png" width="700">
+  <img src="YN.png" width="700">
 </p>
 
 <p align="center">
-  <em> Formula longitud</em> 
+  <em>Y[n]</em> 
 </p>
+
 Para mostrar la secuencia resultante de forma organizada se utilizó:
 
 ```python
 print(", ".join(map(str, y)))
 ```
+<p align="center">
+  <img src="L.png" width="700">
+</p>
+
+<p align="center">
+  <em>Señal Y[n]</em> 
+</p>
 Esto convierte cada elemento del arreglo en texto y los muestra separados por comas, facilitando la comparación con el cálculo manual.
 Se creó el vector  `n = np.arange(len(y))` para representar los valores n del eje horizontal, correspondientes a cada muestra de la señal resultante.
 
