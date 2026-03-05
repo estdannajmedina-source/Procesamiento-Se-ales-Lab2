@@ -108,8 +108,9 @@ $$
 <p align="center">
 <img src="PARTE-A-MANUAL.png" width="500">
 </p>
+
 <p align="center">
-<b>Figura 1. Señal discreta $x_1[n]$</b>
+<em>Señal discreta $x_1[n]$</em>
 </p>
 
 
