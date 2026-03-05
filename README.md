@@ -106,7 +106,7 @@ x_2[n] = \sin(2\pi 100 n T_s)
 $$
 
 <p align="center">
-<img src="PARTE-A-MANUAL.png" width="500">
+<img src="PARTE-A-MANUAL.png" width="700">
 </p>
 
 <p align="center">
@@ -114,7 +114,7 @@ $$
 </p>
 
 <p align="center">
-<img src="PARTE-A-MANUAL.png" width="500">
+<img src="PARTE-A-MANUAL.png" width="700">
 </p>
 
 <p align="center">
@@ -134,7 +134,7 @@ k = np.arange(-(len(x1)-1), len(x1))
 Finalmente, para visualizar el comportamiento de la correlación cruzada se utilizó la función stem(), la cual permite representar señales discretas mediante impulsos verticales, facilitando la interpretación de cada muestra.
 
 <p align="center">
-<img src="PARTE-A-MANUAL.png" width="500">
+<img src="PARTE-A-MANUAL.png" width="700">
 </p>
 
 <p align="center">
