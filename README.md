@@ -84,4 +84,13 @@ En esta parte se analizaron dos señales discretas definidas a partir de funcion
 Las señales fueron definidas utilizando una frecuencia de 100 Hz y un período de muestreo $$T_s=1.25ms$$. A partir de estos parámetros se generaron dos secuencias discretas: $x_1[n]$ y $x_2[n]$, correspondientes a una función coseno y una función seno respectivamente.
 
 En Python, las señales se definieron de la siguiente manera:
+```python
+Ts = 0.00125
+f = 100
+n = np.arange(0,9)
 
+w = 2*np.pi*f*Ts
+
+x1 = np.cos(w*n)
+x2 = np.sin(w*n)
+```
