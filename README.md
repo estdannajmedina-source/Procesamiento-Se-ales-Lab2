@@ -106,9 +106,10 @@ x_2[n] = \sin(2\pi 100 n T_s)
 $$
 
 <p align="center">
+<img src="PARTE-A-MANUAL.png" width="500">
+</p>
+<p align="center">
 <b>Figura 1. Señal discreta $x_1[n]$</b>
 </p>
 
-<p align="center">
-<img src="PARTE-A-MANUAL.png" width="500">
-</p>
+
