@@ -138,7 +138,7 @@ Finalmente, para visualizar el comportamiento de la correlación cruzada se util
 </p>
 
 <p align="center">
-   <em>Correlación cruzada $r_{x_1x_2}[k]$</em>
+   <em>Correlación cruzada r<sub>x₁x₂</sub>[k]</em>
 </p>
 
 A partir de la gráfica obtenida se observa que la correlación presenta un valor máximo cuando  $$k=2$$. Esto indica que las señales presentan mayor similitud cuando una de ellas se desplaza dos muestras respecto a la otra. Este comportamiento se debe a que las funciones seno y coseno poseen un desfase de 90°, lo cual se refleja en el desplazamiento observado en la correlación.
