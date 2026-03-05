@@ -77,3 +77,11 @@ Esto convierte cada elemento del arreglo en texto y los muestra separados por co
 Se creó el vector  `n = np.arange(len(y))` para representar los valores n del eje horizontal, correspondientes a cada muestra de la señal resultante.
 
 Se utilizó la función `stem()` para graficar la señal discreta, representa cada muestra como un impulso vertical y `figsize=(14,4)` ampliar el eje horizontal para mejorar la visualización.
+
+### Parte B
+En esta parte se analizaron dos señales discretas definidas a partir de funciones trigonométricas. El objetivo fue calcular la correlación cruzada entre ambas señales para analizar el grado de similitud entre ellas cuando una se desplaza respecto a la otra.
+
+Las señales fueron definidas utilizando una frecuencia de 100 Hz y un período de muestreo T_s=1.25ms. A partir de estos parámetros se generaron dos secuencias discretas: $x_1[n]$ y $x_2[n]$, correspondientes a una función coseno y una función seno respectivamente.
+
+En Python, las señales se definieron de la siguiente manera:
+
