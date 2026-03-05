@@ -106,19 +106,19 @@ x_2[n] = \sin(2\pi 100 n T_s)
 $$
 
 <p align="center">
+  <img src="PARTE-A-MANUAL.png" width="700">
+</p>
+
+<p align="center">
+   <em>Señal discreta $x_1[n]$ </em>
+</p>
+
+<p align="center">
 <img src="PARTE-A-MANUAL.png" width="700">
 </p>
 
 <p align="center">
-<em>Señal discreta $x_1[n]$</em>
-</p>
-
-<p align="center">
-<img src="PARTE-A-MANUAL.png" width="700">
-</p>
-
-<p align="center">
-<em>Señal discreta $x_2[n]$</em>
+    <em>Señal discreta $x_2[n]$</em>
 </p>
 
 Posteriormente se calculó la correlación cruzada, la cual permite medir la similitud entre dos señales cuando una de ellas se desplaza en el tiempo. Esta operación es ampliamente utilizada en procesamiento digital de señales para identificar retardos o coincidencias entre señales.
@@ -134,11 +134,11 @@ k = np.arange(-(len(x1)-1), len(x1))
 Finalmente, para visualizar el comportamiento de la correlación cruzada se utilizó la función stem(), la cual permite representar señales discretas mediante impulsos verticales, facilitando la interpretación de cada muestra.
 
 <p align="center">
-<img src="PARTE-A-MANUAL.png" width="700">
+  <img src="PARTE-A-MANUAL.png" width="700">
 </p>
 
 <p align="center">
-<em>Correlación cruzada $r_{x_1x_2}[k]$</em>
+   <em>Correlación cruzada $r_{x_1x_2}[k]$</em>
 </p>
 
 A partir de la gráfica obtenida se observa que la correlación presenta un valor máximo cuando  $$k=2$$. Esto indica que las señales presentan mayor similitud cuando una de ellas se desplaza dos muestras respecto a la otra. Este comportamiento se debe a que las funciones seno y coseno poseen un desfase de 90°, lo cual se refleja en el desplazamiento observado en la correlación.
