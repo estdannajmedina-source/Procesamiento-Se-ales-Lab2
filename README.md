@@ -52,13 +52,14 @@ Posteriormente, se determinó la longitud de las señales involucradas en el sis
 </p>
 
 <p align="center">
-  <img src="GRAFICA-FINAL.jpeg" width="700">
+  <img src="GRAFICA-FINAL .jpeg" width="700">
 </p>
 <p align="center">
   <em>GRAFICA A MANO</em> 
 </p>
+
 Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
-Se definieron dos señales discretas:
+Se definieron dos señales discretas en phyton:
 x[n] y h[n], Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente.
 
 ```python
@@ -70,8 +71,6 @@ La convolucion se realizó mediante:
 ```python
 y = np.convolve(x, h)
 ```
-
-Esta operacion se refiere a
 
 <p align="center">
   <img src="formulaconvolucion.png" width="700">
