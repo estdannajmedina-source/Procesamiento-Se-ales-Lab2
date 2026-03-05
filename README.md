@@ -29,7 +29,14 @@ El desarrollo del laboratorio se dividió en tres partes principales.
 En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de fourier.
 
 ### Parte A
-En esta parte se calculó la convolución entre una señal de entrada y un sistema discreto definidos a partir de datos personales. El procedimiento se realizó de forma manual mediante sumatorias.
+En esta parte del laboratorio se analizó la respuesta de un sistema discreto mediante la operación de convolución entre dos señales discretas. Para ello se definio la señal h[n], construida a partir de los dígitos de los dos códigos, y la señal x[n], formada por los dígitos de las dos cédulas.
+$$h(n) =[5,6,0,0,9,2,3,5,6,0,0,8,9,4]$$
+
+$$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
+
+Estas secuencias representan valores discretos de una señal en el tiempo y permiten estudiarla cómo un sistema lineal e invariante en el tiempo.
+
+Inicialmente se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k].$$ Este procedimiento consiste en invertir la señal del sistema, desplazarla a lo largo de la señal de entrada y realizar multiplicaciones entre los valores que coinciden en cada desplazamiento. Posteriormente se suman estos productos para obtener cada uno de los valores de la señal resultante y[n].
 <p align="center">
   <img src="PARTE-A-MANUAL.png" width="700">
 </p>
