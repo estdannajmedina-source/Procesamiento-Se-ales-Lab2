@@ -110,7 +110,7 @@ $$
 </p>
 
 <p align="center">
-   <em>Señal discreta $x_{1}[n]$</em>
+   <em>Señal discreta x<sub>1</sub>[n]</em>
 </p>
 
 <p align="center">
@@ -118,7 +118,7 @@ $$
 </p>
 
 <p align="center">
-    <em>Señal discreta $x_{2}[n]$</em>
+    <em>Señal discreta x<sub>2</sub>[n]</em>
 </p>
 
 Posteriormente se calculó la correlación cruzada, la cual permite medir la similitud entre dos señales cuando una de ellas se desplaza en el tiempo. Esta operación es ampliamente utilizada en procesamiento digital de señales para identificar retardos o coincidencias entre señales.
