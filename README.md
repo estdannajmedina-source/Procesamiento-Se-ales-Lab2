@@ -139,18 +139,18 @@ $$
 x_2[n] = \sin(2\pi 100 n T_s)
 $$
 
+
 <p align="center">
   <img src="XN1.png" width="700">
 </p>
-
 <p align="center">
    <em>Señal discreta x<sub>1</sub>[n]</em>
 </p>
 
+
 <p align="center">
 <img src="XN2.png" width="700">
 </p>
-
 <p align="center">
     <em>Señal discreta x<sub>2</sub>[n]</em>
 </p>
