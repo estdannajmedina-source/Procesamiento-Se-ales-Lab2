@@ -270,6 +270,7 @@ plt.show()
 <p align="center">
    <em>Señal EOG</em>
 </p>
+La señal EOG se clasifica como una señal aleatoria porque los movimientos oculares que la generan dependen de procesos fisiológicos que no pueden predecirse exactamente y presentan variaciones debidas a ruido biológico y electrónico. Además, es aperiódica, ya que los movimientos de los ojos, como parpadeos o sacadas, no ocurren en intervalos regulares ni producen una forma de onda que se repita de manera idéntica en el tiempo. Finalmente, en este caso se trata de una señal digital, porque fue adquirida mediante un sistema de muestreo y posteriormente almacenada y procesada en Python, lo que implica que está representada por valores discretos en el tiempo y cuantificados numéricamente. 
 
 Posteriormente se realizó el análisis de la señal en el dominio de la frecuencia mediante la aplicación de la Transformada Rápida de Fourier (FFT). Este procedimiento permite transformar la señal desde el dominio del tiempo al dominio de la frecuencia, con el objetivo de identificar las componentes de frecuencia presentes en la señal. A partir de esta transformación se obtuvo el espectro de magnitud, el cual muestra cómo se distribuyen las amplitudes de las diferentes frecuencias que componen la señal biológica.
 
