@@ -21,12 +21,12 @@ María José Polo Tovar – Código 5600894
 
 ## Descripción
 
-Este informe presenta el desarrollo y análisis de la convolución, correlación y transformada de fourier aplicadas a señales discretas y biológicas. Incluye el cálculo manual y en Python, la caracterización estadística en el dominio del tiempo y el análisis espectral en el dominio de la frecuencia.
+Este informe presenta el desarrollo y análisis de la convolución, correlación y transformada de Fourier aplicadas a señales discretas y biológicas. Incluye el cálculo manual y en Python, la caracterización estadística en el dominio del tiempo y el análisis espectral en el dominio de la frecuencia.
 
 ---
 ## Metodología
-El desarrollo del laboratorio se dividió en tres partes principales.
-En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de fourier.
+EEl desarrollo del laboratorio se dividió en tres partes principales.
+En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de Fourier.
 
 <p align="center">
   <img src="DIAG.jpeg" width="700">
@@ -39,7 +39,7 @@ En la primera parte, se realizó el cálculo de la convolución entre dos secuen
 ---
 
 ### Parte A
-En primer lugar, se realizó la representación gráfica de las señales x[n] de forma manual. Para ello se tomaron los valores de cada secuencia y se construyeron sus respectivas graficas, donde cada muestra se representa mediante una línea vertical terminada en un punto. Esta representación permitió visualizar el comportamiento discreto de las señales y ubicar correctamente cada valor respecto al índice n. 
+En primer lugar, se realizó la representación gráfica de las señales x[n] de forma manual. Para ello se tomaron los valores de cada secuencia y se construyeron sus respectivas gráficas, donde cada muestra se representa mediante una línea vertical terminada en un punto. Esta representación permitió visualizar el comportamiento discreto de las señales y ubicar correctamente cada valor respecto al índice n.
 
 $$h(n) =[5,6,0,0,9,2,3,5,6,0,0,8,9,4]$$
 $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
@@ -51,7 +51,7 @@ $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
   <em>Señales</em> 
 </p>
 
-Posteriormente, se determinó la longitud de las señales involucradas en el sistema. La señal h[n] corresponde a la respuesta del sistema y está formada por 14 muestras, mientras que la señal x[n] corresponde a la señal de entrada y contiene 20 muestras. A partir de estos valores se calculó la longitud de la señal resultante y[n] De esta forma se obtuvo que la señal resultante tiene 33 muestras. Se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k].$$ Este procedimiento consiste en calcular la convolución de forma manual utilizando una tabla. En esta tabla se organizaron los desplazamientos de la señal h[n] respecto a la señal x[n], realizando las multiplicaciones entre los valores correspondientes en cada posición. Posteriormente se sumaron los productos obtenidos en cada desplazamiento para calcular cada valor de la señal resultante y[n]. Este método permitió visualizar de manera ordenada el proceso de convolución y facilitar el cálculo de cada término de la secuencia resultante. Tambien se grafico la señal y[n] resultante.
+osteriormente, se determinó la longitud de las señales involucradas en el sistema. La señal h[n] corresponde a la respuesta del sistema y está formada por 14 muestras, mientras que la señal x[n] corresponde a la señal de entrada y contiene 20 muestras. A partir de estos valores se calculó la longitud de la señal resultante y[n]. De esta forma se obtuvo que la señal resultante tiene 33 muestras. Se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k]$$ Este procedimiento consiste en calcular la convolución de forma manual utilizando una tabla. En esta tabla se organizaron los desplazamientos de la señal h[n] respecto a la señal x[n], realizando las multiplicaciones entre los valores correspondientes en cada posición. Posteriormente se sumaron los productos obtenidos en cada desplazamiento para calcular cada valor de la señal resultante y[n]. Este método permitió visualizar de manera ordenada el proceso de convolución y facilitar el cálculo de cada término de la secuencia resultante. También se graficó la señal y[n] resultante.
 <p align="center">
   <img src="PARTE-A-MANUAL.jpeg" width="700">
 </p>
@@ -66,8 +66,8 @@ Posteriormente, se determinó la longitud de las señales involucradas en el sis
   <em>GRAFICA A MANO</em> 
 </p>
 
-Posteriormentese implementó el procedimiento en Python con el objetivo de, verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
-Se definieron dos señales discretas en phyton: x[n] y h[n], Ambas señales se almacenan como arreglos (array),lo que permite realizar operaciones matemáticas de manera eficiente y ademas se graficaron.
+Posteriormente se implementó el procedimiento en Python con el objetivo de verificar los resultados obtenidos de ambas maneras, automatizar el cálculo y representar gráficamente la señal resultante.
+Se definieron dos señales discretas en Python: x[n] y h[n]. Ambas señales se almacenan como arreglos (array), lo que permite realizar operaciones matemáticas de manera eficiente y además se graficaron.
 
 ```python
 h = np.array([5,6,0,0,9,2,3,5,6,0,0,8,9,4])
@@ -197,7 +197,7 @@ De esta manera, el análisis confirma que la correlación cruzada es una herrami
 
 ### Parte C
 
-En esta parte del laboratorio se generó y analizó una señal biológica utilizando el generador de señales biológicas. La señal utilizada corresponde a unaseñ al EOG (Electrooculografía), la cual registra variaciones de potencial eléctrico producidas por el movimiento ocular. Inicialmente se cargó el archivo que contiene la señal adquirida, el cual presenta dos columnas: la primera corresponde al tiempo de adquisición y la segunda al voltaje registrado por el sistema de medición. Posteriormente se separaron estas columnas en dos variables independientes para facilitar su procesamiento y análisis dentro del programa.
+En esta parte del laboratorio se generó y analizó una señal biológica utilizando el generador de señales biológicas. La señal utilizada corresponde a una señal EOG (Electrooculografía), la cual registra variaciones de potencial eléctrico producidas por el movimiento ocular. Inicialmente se cargó el archivo que contiene la señal adquirida, el cual presenta dos columnas: la primera corresponde al tiempo de adquisición y la segunda al voltaje registrado por el sistema de medición. Posteriormente se separaron estas columnas en dos variables independientes para facilitar su procesamiento y análisis dentro del programa.
 
 ```python
 # Cargar archivo con los datos de la señal
@@ -218,7 +218,7 @@ N = len(senal)
 print("Número de muestras:", N)
 ```
 
-Una vez cargada la señal, se procedió a determinar la frecuencia de Nyquist, la cual representa la frecuencia mínima de muestreo necesaria para evitar pérdida de información en la digitalización de la señal. En este caso se consideró que la frecuencia máxima presente en la señal es de 30 Hz, por lo que la frecuencia de Nyquist corresponde al doble de esta frecuencia. Posteriormente se estableció la frecuencia de muestreo utilizada en el sistema de adquisición, la cual se definió como cuatro veces la frecuencia de Nyquist, con el objetivo de garantizar una representación digital adecuada de la señal y minimizar posibles efectos de aliasing durante el proceso de digitalización, no obstante se genero una frecuencia de muestreo mayor a la obtenia.
+Una vez cargada la señal, se procedió a determinar la frecuencia de Nyquist, la cual representa la frecuencia mínima de muestreo necesaria para evitar pérdida de información en la digitalización de la señal. En este caso se consideró que la frecuencia máxima presente en la señal es de 30 Hz, por lo que la frecuencia de Nyquist corresponde al doble de esta frecuencia. Posteriormente se estableció la frecuencia de muestreo utilizada en el sistema de adquisición, la cual se definió como cuatro veces la frecuencia de Nyquist, con el objetivo de garantizar una representación digital adecuada de la señal y minimizar posibles efectos de aliasing durante el proceso de digitalización, no obstante se generó una frecuencia de muestreo mayor a la obtenida.
 
 ```python
 # Cálculo de la frecuencia de Nyquist
@@ -374,10 +374,9 @@ plt.show()
 ---
 ### Análisis de resultados 
 
-Análisis 1:
+Análisis
 En el desarrollo del laboratorio se utilizaron convolución y correlación cruzada como herramientas fundamentales del Procesamiento Digital de Señales para analizar señales discretas y comprender su posible aplicación en señales biomédicas. En la Parte A se implementó la convolución mediante la operación $y = np.convolve(x, h)$ donde la señal $x[n]$ representa la entrada del sistema y $h[n]$ la respuesta al impulso. A partir de esta operación se obtuvo la señal de salida $y[n]$, cuya longitud corresponde a la suma de las longitudes de ambas señales menos uno. Este procedimiento permitió evidenciar que la convolución puede utilizarse para modelar sistemas digitales o aplicar filtros, lo cual en el contexto de señales biomédicas resulta útil para suavizar ruido, resaltar componentes relevantes o simular el comportamiento de sistemas de adquisición de señales fisiológicas. En la Parte B se aplicó la correlación cruzada entre dos señales sinusoidales utilizando la función $np.correlate$, lo que permitió medir la similitud entre ambas señales en diferentes retardos y determinar el desplazamiento donde la correlación es máxima. Este análisis muestra que la correlación puede emplearse en señales biomédicas para detectar patrones, estimar desfases temporales o alinear señales provenientes de diferentes sensores. Sin embargo, también se identifican algunas limitaciones, ya que las señales biomédicas reales suelen ser no estacionarias, ruidosas y altamente variables, lo que puede afectar la precisión de los resultados obtenidos mediante correlación o filtrado por convolución si no se seleccionan adecuadamente los parámetros del procesamiento.
 
-Análisis 2:
 En la Parte C del laboratorio se analizó una señal biomédica EOG utilizando la Transformada de Fourier, lo que permitió estudiar su comportamiento en el dominio de la frecuencia. Inicialmente se cargó la señal y se calcularon estadísticas básicas en el dominio temporal, como media, mediana, desviación estándar, valores máximos y mínimos. Posteriormente se aplicó la Transformada Rápida de Fourier (FFT) mediante $np.fft.fft$, con el objetivo de obtener el espectro de magnitud de la señal y analizar las frecuencias presentes en ella. Además, se estimó la densidad espectral de potencia utilizando el método de Welch, lo cual permitió observar cómo se distribuye la energía de la señal en diferentes frecuencias y calcular parámetros espectrales como frecuencia media, frecuencia mediana y desviación estándar de frecuencia. Este tipo de análisis demuestra que la transformada de Fourier tiene un gran alcance en aplicaciones de procesamiento de señales, ya que permite identificar componentes frecuenciales relevantes, analizar el contenido espectral y apoyar el diseño de filtros digitales. No obstante, también presenta limitaciones cuando se considera su aplicación en tiempo real, ya que la transformada de Fourier analiza bloques de señal y proporciona información global del contenido en frecuencia, sin indicar con precisión en qué instante del tiempo ocurren determinados eventos o cambios en la señal. Asimismo, existe un compromiso entre resolución temporal y resolución frecuencial, puesto que ventanas de análisis más largas mejoran la precisión en frecuencia pero pueden incrementar la latencia del sistema. Por esta razón, en aplicaciones biomédicas donde la señal presenta cambios rápidos o transitorios, suele ser necesario complementar este análisis con métodos de análisis tiempo–frecuencia.
 
 ---
