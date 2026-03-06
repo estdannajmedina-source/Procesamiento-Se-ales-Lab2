@@ -378,3 +378,54 @@ En el desarrollo del laboratorio se utilizaron convolución y correlación cruza
 
 Análisis 2:
 En la Parte C del laboratorio se analizó una señal biomédica EOG utilizando la Transformada de Fourier, lo que permitió estudiar su comportamiento en el dominio de la frecuencia. Inicialmente se cargó la señal y se calcularon estadísticas básicas en el dominio temporal, como media, mediana, desviación estándar, valores máximos y mínimos. Posteriormente se aplicó la Transformada Rápida de Fourier (FFT) mediante $np.fft.fft$, con el objetivo de obtener el espectro de magnitud de la señal y analizar las frecuencias presentes en ella. Además, se estimó la densidad espectral de potencia utilizando el método de Welch, lo cual permitió observar cómo se distribuye la energía de la señal en diferentes frecuencias y calcular parámetros espectrales como frecuencia media, frecuencia mediana y desviación estándar de frecuencia. Este tipo de análisis demuestra que la transformada de Fourier tiene un gran alcance en aplicaciones de procesamiento de señales, ya que permite identificar componentes frecuenciales relevantes, analizar el contenido espectral y apoyar el diseño de filtros digitales. No obstante, también presenta limitaciones cuando se considera su aplicación en tiempo real, ya que la transformada de Fourier analiza bloques de señal y proporciona información global del contenido en frecuencia, sin indicar con precisión en qué instante del tiempo ocurren determinados eventos o cambios en la señal. Asimismo, existe un compromiso entre resolución temporal y resolución frecuencial, puesto que ventanas de análisis más largas mejoran la precisión en frecuencia pero pueden incrementar la latencia del sistema. Por esta razón, en aplicaciones biomédicas donde la señal presenta cambios rápidos o transitorios, suele ser necesario complementar este análisis con métodos de análisis tiempo–frecuencia.
+
+### Preguntas para la discusión
+
+1. ¿Qué utilidad poseen herramientas como la convolución y la correlación en áreas como procesamiento de imágenes?
+  
+En el Procesamiento Digital de Señales, la convolución y la correlación son operaciones fundamentales para el análisis y procesamiento de señales discretas, incluyendo imágenes digitales, que pueden interpretarse como señales bidimensionales.
+La convolución es esencial para describir el comportamiento de los sistemas lineales e invariantes en el tiempo (LTI). En este contexto, la salida de un sistema se obtiene mediante la convolución entre la señal de entrada y la respuesta al impulso del sistema. En procesamiento de imágenes, esto permite implementar filtros digitales que modifican o mejoran ciertas características de la señal. Por ejemplo:
+
+- Filtrado pasa-bajos, utilizado para suavizar la señal o reducir ruido.
+- Filtrado pasa-altos, que permite resaltar transiciones rápidas como bordes.
+- Filtrado espacial, que mejora detalles o elimina componentes no deseados.
+
+Por otro lado, la correlación se utiliza principalmente para medir el grado de similitud entre señales o entre diferentes segmentos de una misma señal. En PDS es útil para:
+
+- Detección de patrones o señales conocidas dentro de una señal recibida.
+- Sincronización de señales en sistemas de comunicación.
+- Estimación de retardos temporales entre señales.
+
+En general, ambas operaciones permiten analizar la estructura de las señales, diseñar filtros digitales y extraer información relevante, lo que las convierte en herramientas esenciales dentro del procesamiento digital de señales.
+
+2. ¿En cuáles contextos de aplicación la transformada de Fourier ofrece un
+conjunto de características con mayor poder discriminativo que las que
+suelen considerarse desde el dominio temporal?
+
+La Transformada de Fourier permite representar una señal en el dominio de la frecuencia, descomponiéndola en la suma de componentes sinusoidales. En muchos problemas de procesamiento digital de señales, esta representación proporciona información más clara y discriminativa que el análisis directo en el dominio temporal.
+Esto ocurre especialmente cuando las características importantes de la señal están relacionadas con su contenido espectral. Algunos contextos relevantes incluyen:
+
+- Análisis espectral de señales, donde se identifican frecuencias dominantes.
+- Filtrado digital, ya que muchos filtros se diseñan y analizan en el dominio de la frecuencia.
+- Procesamiento de audio, donde la información relevante se encuentra en las bandas de frecuencia.
+- Análisis de vibraciones o señales biomédicas, en las que ciertos fenómenos se identifican por componentes espectrales específicas.
+- Procesamiento de imágenes, donde las texturas o patrones repetitivos se identifican mejor mediante su espectro.
+  
+Además, la transformada de Fourier simplifica ciertas operaciones matemáticas importantes en PDS, como el hecho de que la convolución en el dominio temporal equivale a una multiplicación en el dominio de la frecuencia, lo que facilita el diseño e implementación eficiente de filtros.
+
+3. ¿En qué se diferencia la correlación cruzada de la convolución?
+   
+En el Procesamiento Digital de Señales, la convolución y la correlación cruzada son operaciones estrechamente relacionadas, pero tienen objetivos distintos.
+La convolución se utiliza principalmente para describir la respuesta de un sistema LTI a una señal de entrada. Matemáticamente implica invertir temporalmente una de las señales antes de realizar el desplazamiento y la multiplicación punto a punto.
+En cambio, la correlación cruzada mide la similitud entre dos señales en función de un desplazamiento temporal. A diferencia de la convolución, en la correlación no se invierte la señal, sino que se compara directamente para determinar en qué desplazamiento ambas señales presentan mayor coincidencia.
+En términos prácticos dentro de PDS:
+
+- Convolución:
+Se utiliza para filtrado digital y análisis de sistemas.
+
+- Correlación cruzada:
+Se utiliza para detectar señales, estimar retardos y analizar similitud entre señales.
+
+Por lo tanto, aunque ambas operaciones implican desplazamiento, multiplicación y suma, su diferencia principal radica en el objetivo del análisis y la inversión temporal presente en la convolución.
+
+
