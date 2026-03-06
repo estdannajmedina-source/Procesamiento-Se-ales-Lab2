@@ -35,6 +35,7 @@ En la primera parte, se realizó el cálculo de la convolución entre dos secuen
 <p align="center">
   <em>Diagrama de flujo</em> 
 </p>
+---
 
 ### Parte A
 En primer lugar, se realizó la representación gráfica de las señales x[n] de forma manual. Para ello se tomaron los valores de cada secuencia y se construyeron sus respectivas graficas, donde cada muestra se representa mediante una línea vertical terminada en un punto. Esta representación permitió visualizar el comportamiento discreto de las señales y ubicar correctamente cada valor respecto al índice n. 
@@ -119,6 +120,8 @@ Se creó el vector `np.arange(len(y))` para representar los valores n del eje ho
 
 Se utilizó la función `stem()` para graficar la señal discreta, representa cada muestra como un impulso vertical y `figsize=(14,4)` ampliar el eje horizontal para mejorar la visualización.
 
+---
+
 ### Parte B
 En esta parte se analizaron dos señales discretas definidas a partir de funciones trigonométricas. El objetivo fue calcular la correlación cruzada entre ambas señales para analizar el grado de similitud entre ellas cuando una se desplaza respecto a la otra.
 
@@ -152,8 +155,6 @@ $$
 <p align="center">
    <em>Señal discreta x<sub>1</sub>[n]</em>
 </p>
-
-
 
 <p align="center">
 <img src="XN2.png" width="700">
@@ -190,8 +191,9 @@ De esta manera, el análisis confirma que la correlación cruzada es una herrami
 <p align="center">
    <em>Correlación cruzada</em>
 </p>
+---
+
 ### Parte C
-# Parte C – Análisis de una señal biológica (EOG)
 
 En esta parte del laboratorio se generó y analizó una señal biológica utilizando el generador de señales biológicas. La señal utilizada corresponde a unaseñ al EOG (Electrooculografía), la cual registra variaciones de potencial eléctrico producidas por el movimiento ocular. Inicialmente se cargó el archivo que contiene la señal adquirida, el cual presenta dos columnas: la primera corresponde al tiempo de adquisición y la segunda al voltaje registrado por el sistema de medición. Posteriormente se separaron estas columnas en dos variables independientes para facilitar su procesamiento y análisis dentro del programa.
 
