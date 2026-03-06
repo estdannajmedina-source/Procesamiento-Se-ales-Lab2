@@ -346,11 +346,12 @@ plt.grid()
 plt.show()
 ```
 <p align="center">
-  <img src="Parte2B.png" width="700">
+  <img src="PARTE2B.png" width="700">
 </p>
 <p align="center">
    <em>Estadisticos de frecuencias</em>
 </p>
+
 <p align="center">
   <img src="HIS.png" width="700">
 </p>
