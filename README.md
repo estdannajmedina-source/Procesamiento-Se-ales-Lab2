@@ -28,6 +28,14 @@ Este informe presenta el desarrollo y análisis de la convolución, correlación
 El desarrollo del laboratorio se dividió en tres partes principales.
 En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de fourier.
 
+<p align="center">
+  <img src="DIAG.jpeg" width="700">
+</p>
+
+<p align="center">
+  <em>Diagrama de flujo</em> 
+</p>
+
 ### Parte A
 En primer lugar, se realizó la representación gráfica de las señales x[n] de forma manual. Para ello se tomaron los valores de cada secuencia y se construyeron sus respectivas graficas, donde cada muestra se representa mediante una línea vertical terminada en un punto. Esta representación permitió visualizar el comportamiento discreto de las señales y ubicar correctamente cada valor respecto al índice n. 
 
