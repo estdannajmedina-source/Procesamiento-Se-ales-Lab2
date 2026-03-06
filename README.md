@@ -398,6 +398,7 @@ Por otro lado, la correlación se utiliza principalmente para medir el grado de 
 
 En general, ambas operaciones permiten analizar la estructura de las señales, diseñar filtros digitales y extraer información relevante, lo que las convierte en herramientas esenciales dentro del procesamiento digital de señales.
 
+
 2. ¿En cuáles contextos de aplicación la transformada de Fourier ofrece un
 conjunto de características con mayor poder discriminativo que las que
 suelen considerarse desde el dominio temporal?
@@ -412,6 +413,7 @@ Esto ocurre especialmente cuando las características importantes de la señal e
 - Procesamiento de imágenes, donde las texturas o patrones repetitivos se identifican mejor mediante su espectro.
   
 Además, la transformada de Fourier simplifica ciertas operaciones matemáticas importantes en PDS, como el hecho de que la convolución en el dominio temporal equivale a una multiplicación en el dominio de la frecuencia, lo que facilita el diseño e implementación eficiente de filtros.
+
 
 3. ¿En qué se diferencia la correlación cruzada de la convolución?
    
@@ -428,4 +430,12 @@ Se utiliza para detectar señales, estimar retardos y analizar similitud entre s
 
 Por lo tanto, aunque ambas operaciones implican desplazamiento, multiplicación y suma, su diferencia principal radica en el objetivo del análisis y la inversión temporal presente en la convolución.
 
+---
+### Referencias 
+Oppenheim, A. V., & Schafer, R. W. (2010). Discrete-time signal processing (3rd ed.). Pearson.
 
+Proakis, J. G., & Manolakis, D. G. (2007). Digital signal processing: Principles, algorithms, and applications (4th ed.). Pearson Prentice Hall.
+
+Cohen, L. (1995). Time-frequency analysis. Prentice Hall.
+
+Semmlow, J. L., & Griffel, B. (2014). Biosignal and biomedical image processing: MATLAB-based applications (3rd ed.). CRC Press.
