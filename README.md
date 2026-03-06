@@ -99,7 +99,7 @@ Para mostrar la secuencia resultante de forma organizada se utilizó:
 print(", ".join(map(str, y)))
 ```
 <p align="center">
-  <img src="L .png" width="700">
+  <img src="DATOS.png" width="700">
 </p>
 
 <p align="center">
@@ -176,7 +176,12 @@ Finalmente, para visualizar el comportamiento de la correlación cruzada se util
 A partir de la gráfica obtenida se observa que la correlación presenta un valor máximo cuando  $$k=2$$. Esto indica que las señales presentan mayor similitud cuando una de ellas se desplaza dos muestras respecto a la otra. Este comportamiento se debe a que las funciones seno y coseno poseen un desfase de 90°, lo cual se refleja en el desplazamiento observado en la correlación.
 
 De esta manera, el análisis confirma que la correlación cruzada es una herramienta útil para estudiar la relación entre señales discretas y detectar retardos entre ellas.
-
+<p align="center">
+  <img src="PARTEB.png" width="700">
+</p>
+<p align="center">
+   <em>Correlación cruzada</em>
+</p>
 ### Parte C
 # Parte C – Análisis de una señal biológica (EOG)
 
@@ -213,7 +218,6 @@ print("Frecuencia de Nyquist:", f_nyquist, "Hz")
 fmuestreo = 4 * f_nyquist
 print("Frecuencia de muestreo:", fmuestreo, "Hz")
 ```
-
 Posteriormente se realizó la caracterización estadística de la señal en el dominio del tiempo, con el objetivo de describir el comportamiento general de la señal adquirida. Para ello se calcularon parámetros estadísticos fundamentales tales como la media, la mediana, la desviación estándar, así como los valores máximo y mínimo, que permiten identificar los extremos de la señal durante el periodo de adquisición. Estos parámetros proporcionan una descripción cuantitativa del comportamiento de la señal biológica registrada.
 
 ```python
@@ -230,7 +234,12 @@ print("Desviación estándar:", desv_std)
 print("Máximo:", maximo)
 print("Mínimo:", minimo)
 ```
-
+<p align="center">
+  <img src="ParteC.png" width="700">
+</p>
+<p align="center">
+   <em>Muestras y datos </em>
+</p>
 Una vez obtenidas las características estadísticas de la señal, se realizó su representación gráfica en el dominio del tiempo, con el objetivo de visualizar la evolución del voltaje en función del tiempo durante el proceso de adquisición. Esta representación permite observar el comportamiento general de la señal EOG, así como identificar posibles variaciones o patrones asociados al movimiento ocular registrado por el sistema.
 
 ```python
@@ -336,6 +345,12 @@ plt.title("Histograma de distribución de potencia por frecuencia")
 plt.grid()
 plt.show()
 ```
+<p align="center">
+  <img src="Parte2B.png" width="700">
+</p>
+<p align="center">
+   <em>Estadisticos de frecuencias</em>
+</p>
 <p align="center">
   <img src="HIS.png" width="700">
 </p>
