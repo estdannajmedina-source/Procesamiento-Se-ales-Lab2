@@ -178,3 +178,161 @@ Finalmente, para visualizar el comportamiento de la correlación cruzada se util
 A partir de la gráfica obtenida se observa que la correlación presenta un valor máximo cuando  $$k=2$$. Esto indica que las señales presentan mayor similitud cuando una de ellas se desplaza dos muestras respecto a la otra. Este comportamiento se debe a que las funciones seno y coseno poseen un desfase de 90°, lo cual se refleja en el desplazamiento observado en la correlación.
 
 De esta manera, el análisis confirma que la correlación cruzada es una herramienta útil para estudiar la relación entre señales discretas y detectar retardos entre ellas.
+
+### Parte C
+# Parte C – Análisis de una señal biológica (EOG)
+
+En esta parte del laboratorio se generó y analizó una señal biológica utilizando el generador de señales biológicas. La señal utilizada corresponde a unaseñ al EOG (Electrooculografía), la cual registra variaciones de potencial eléctrico producidas por el movimiento ocular. Inicialmente se cargó el archivo que contiene la señal adquirida, el cual presenta dos columnas: la primera corresponde al tiempo de adquisición y la segunda al voltaje registrado por el sistema de medición. Posteriormente se separaron estas columnas en dos variables independientes para facilitar su procesamiento y análisis dentro del programa.
+
+```python
+# Cargar archivo con los datos de la señal
+ruta_archivo = r"C:/Users/Usuario/Downloads/Procesamiento de señales/lab 2/senal_eog.txt"
+
+datos = np.loadtxt(ruta_archivo, skiprows=1)
+
+# Separar columnas de tiempo y señal
+t = datos[:,0]
+senal = datos[:,1]
+
+# Frecuencia de muestreo utilizada durante la adquisición
+fs = 300
+
+# Número total de muestras
+N = len(senal)
+
+print("Número de muestras:", N)
+```
+
+Una vez cargada la señal, se procedió a determinar la frecuencia de Nyquist, la cual representa la frecuencia mínima de muestreo necesaria para evitar pérdida de información en la digitalización de la señal. En este caso se consideró que la frecuencia máxima presente en la señal es de 30 Hz, por lo que la frecuencia de Nyquist corresponde al doble de esta frecuencia. Posteriormente se estableció la frecuencia de muestreo utilizada en el sistema de adquisición, la cual se definió como cuatro veces la frecuencia de Nyquist, con el objetivo de garantizar una representación digital adecuada de la señal y minimizar posibles efectos de aliasing durante el proceso de digitalización, no obstante se genero una frecuencia de muestreo mayor a la obtenia.
+
+```python
+# Cálculo de la frecuencia de Nyquist
+fD = 30
+f_nyquist = fD * 2
+print("Frecuencia de Nyquist:", f_nyquist, "Hz")
+
+# Frecuencia de muestreo utilizada para digitalizar la señal
+fmuestreo = 4 * f_nyquist
+print("Frecuencia de muestreo:", fmuestreo, "Hz")
+```
+
+Posteriormente se realizó la caracterización estadística de la señal en el dominio del tiempo, con el objetivo de describir el comportamiento general de la señal adquirida. Para ello se calcularon parámetros estadísticos fundamentales tales como la media, la mediana, la desviación estándar, así como los valores máximo y mínimo, que permiten identificar los extremos de la señal durante el periodo de adquisición. Estos parámetros proporcionan una descripción cuantitativa del comportamiento de la señal biológica registrada.
+
+```python
+# Cálculo de estadísticas en el dominio del tiempo
+media = np.mean(senal)
+mediana = np.median(senal)
+desv_std = np.std(senal)
+maximo = np.max(senal)
+minimo = np.min(senal)
+
+print("Media:", media)
+print("Mediana:", mediana)
+print("Desviación estándar:", desv_std)
+print("Máximo:", maximo)
+print("Mínimo:", minimo)
+```
+
+Una vez obtenidas las características estadísticas de la señal, se realizó su representación gráfica en el dominio del tiempo, con el objetivo de visualizar la evolución del voltaje en función del tiempo durante el proceso de adquisición. Esta representación permite observar el comportamiento general de la señal EOG, así como identificar posibles variaciones o patrones asociados al movimiento ocular registrado por el sistema.
+
+```python
+# Representación de la señal en el dominio del tiempo
+plt.figure(figsize=(16,4))
+plt.plot(t, senal)
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Voltaje (V)")
+plt.title("Señal EOG en el dominio del tiempo")
+plt.grid()
+plt.show()
+```
+<p align="center">
+  <img src="EOG.png" width="700">
+</p>
+<p align="center">
+   <em>Señal EOG</em>
+</p>
+
+Posteriormente se realizó el análisis de la señal en el dominio de la frecuencia mediante la aplicación de la Transformada Rápida de Fourier (FFT). Este procedimiento permite transformar la señal desde el dominio del tiempo al dominio de la frecuencia, con el objetivo de identificar las componentes de frecuencia presentes en la señal. A partir de esta transformación se obtuvo el espectro de magnitud, el cual muestra cómo se distribuyen las amplitudes de las diferentes frecuencias que componen la señal biológica.
+
+```python
+# Transformada de Fourier
+frecuencias = np.fft.fftfreq(N, 1/fs)
+fft_senal = np.fft.fft(senal)
+
+magnitud = np.abs(fft_senal) / N
+
+plt.figure(figsize=(12,5))
+plt.plot(frecuencias[:N//2], magnitud[:N//2])
+
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Magnitud")
+plt.title("Transformada de Fourier de la señal EOG")
+
+plt.xlim(0, fs/2)
+plt.grid()
+plt.show()
+```
+<p align="center">
+  <img src="FFT.png" width="700">
+</p>
+<p align="center">
+   <em>Transformada Rápida de Fourier </em>
+</p>
+Con el fin de analizar de manera más detallada la distribución de energía de la señal en el dominio de la frecuencia, se calculó la densidad espectral de potencia (PSD) utilizando el método de Welch. Este método divide la señal en segmentos y calcula el espectro promedio, lo cual permite obtener una estimación más estable de la distribución de potencia en las diferentes frecuencias presentes en la señal.
+
+```python
+# Densidad espectral de potencia mediante método de Welch
+frecs, psd = signal.welch(senal, fs, nperseg=512)
+
+plt.figure(figsize=(12,4))
+plt.semilogy(frecs, psd)
+
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Densidad espectral de potencia")
+plt.title("Densidad espectral de potencia de la señal EOG")
+
+plt.grid()
+plt.show()
+```
+<p align="center">
+  <img src="DENSIDAD.png" width="700">
+</p>
+<p align="center">
+   <em>Densidad espectral</em>
+</p>
+
+Finalmente se realizó el cálculo de estadísticos en el dominio de la frecuencia, incluyendo la frecuencia media, la frecuencia mediana y la desviación estándar de las frecuencias, utilizando la distribución de potencia obtenida previamente. Estos parámetros permiten describir la distribución espectral de la señal y caracterizar las frecuencias predominantes presentes en la señal biológica. Adicionalmente se construyó un histograma de frecuencias ponderado por la potencia, el cual permite visualizar cómo se distribuye la energía de la señal en el espectro de frecuencias.
+
+```python
+# Cálculo de estadísticos en el dominio de frecuencia
+freq_media = np.sum(frecs * psd) / np.sum(psd)
+
+psd_acumulada = np.cumsum(psd)
+psd_total = psd_acumulada[-1]
+
+indice_mediana = np.where(psd_acumulada >= psd_total/2)[0][0]
+freq_mediana = frecs[indice_mediana]
+
+freq_std = np.sqrt(np.sum(((frecs - freq_media)**2) * psd) / np.sum(psd))
+
+print("Frecuencia media:", freq_media)
+print("Frecuencia mediana:", freq_mediana)
+print("Desviación estándar de frecuencia:", freq_std)
+
+# Histograma de frecuencias
+plt.figure(figsize=(12,4))
+plt.hist(frecs, bins=40, weights=psd, edgecolor="black")
+
+plt.xlabel("Frecuencia (Hz)")
+plt.ylabel("Potencia acumulada")
+plt.title("Histograma de distribución de potencia por frecuencia")
+
+plt.grid()
+plt.show()
+```
+<p align="center">
+  <img src="HIS.png" width="700">
+</p>
+<p align="center">
+   <em>Histograma de distribución de potencia por frecuencia</em>
+</p>
