@@ -371,6 +371,7 @@ plt.show()
    <em>Histograma de distribución de potencia por frecuencia</em>
 </p>
 
+---
 ### Análisis de resultados 
 
 Análisis 1:
@@ -379,6 +380,7 @@ En el desarrollo del laboratorio se utilizaron convolución y correlación cruza
 Análisis 2:
 En la Parte C del laboratorio se analizó una señal biomédica EOG utilizando la Transformada de Fourier, lo que permitió estudiar su comportamiento en el dominio de la frecuencia. Inicialmente se cargó la señal y se calcularon estadísticas básicas en el dominio temporal, como media, mediana, desviación estándar, valores máximos y mínimos. Posteriormente se aplicó la Transformada Rápida de Fourier (FFT) mediante $np.fft.fft$, con el objetivo de obtener el espectro de magnitud de la señal y analizar las frecuencias presentes en ella. Además, se estimó la densidad espectral de potencia utilizando el método de Welch, lo cual permitió observar cómo se distribuye la energía de la señal en diferentes frecuencias y calcular parámetros espectrales como frecuencia media, frecuencia mediana y desviación estándar de frecuencia. Este tipo de análisis demuestra que la transformada de Fourier tiene un gran alcance en aplicaciones de procesamiento de señales, ya que permite identificar componentes frecuenciales relevantes, analizar el contenido espectral y apoyar el diseño de filtros digitales. No obstante, también presenta limitaciones cuando se considera su aplicación en tiempo real, ya que la transformada de Fourier analiza bloques de señal y proporciona información global del contenido en frecuencia, sin indicar con precisión en qué instante del tiempo ocurren determinados eventos o cambios en la señal. Asimismo, existe un compromiso entre resolución temporal y resolución frecuencial, puesto que ventanas de análisis más largas mejoran la precisión en frecuencia pero pueden incrementar la latencia del sistema. Por esta razón, en aplicaciones biomédicas donde la señal presenta cambios rápidos o transitorios, suele ser necesario complementar este análisis con métodos de análisis tiempo–frecuencia.
 
+---
 ### Preguntas para la discusión
 
 1. ¿Qué utilidad poseen herramientas como la convolución y la correlación en áreas como procesamiento de imágenes?
