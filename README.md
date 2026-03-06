@@ -25,7 +25,7 @@ Este informe presenta el desarrollo y análisis de la convolución, correlación
 
 ---
 ## Metodología
-EEl desarrollo del laboratorio se dividió en tres partes principales.
+El desarrollo del laboratorio se dividió en tres partes principales.
 En la primera parte, se realizó el cálculo de la convolución entre dos secuencias discretas, tanto de forma manual como mediante Python, junto con su representación gráfica. En la segunda parte, se determinó la correlación cruzada entre dos señales sinusoidales y se analizó su comportamiento. Finalmente, se generó, capturó y digitalizó una señal biológica para su caracterización estadística en el dominio del tiempo y su análisis espectral mediante la transformada de Fourier.
 
 <p align="center">
