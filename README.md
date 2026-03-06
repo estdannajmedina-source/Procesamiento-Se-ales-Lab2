@@ -235,7 +235,7 @@ print("Máximo:", maximo)
 print("Mínimo:", minimo)
 ```
 <p align="center">
-  <img src="ParteC.png" width="700">
+  <img src="PARTEC.png" width="700">
 </p>
 <p align="center">
    <em>Muestras y datos </em>
