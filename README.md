@@ -35,6 +35,7 @@ En la primera parte, se realizó el cálculo de la convolución entre dos secuen
 <p align="center">
   <em>Diagrama de flujo</em> 
 </p>
+
 ---
 
 ### Parte A
@@ -191,6 +192,7 @@ De esta manera, el análisis confirma que la correlación cruzada es una herrami
 <p align="center">
    <em>Correlación cruzada</em>
 </p>
+
 ---
 
 ### Parte C
