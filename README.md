@@ -32,7 +32,6 @@ En la primera parte, se realizó el cálculo de la convolución entre dos secuen
 En primer lugar, se realizó la representación gráfica de las señales x[n] de forma manual. Para ello se tomaron los valores de cada secuencia y se construyeron sus respectivas graficas, donde cada muestra se representa mediante una línea vertical terminada en un punto. Esta representación permitió visualizar el comportamiento discreto de las señales y ubicar correctamente cada valor respecto al índice n. 
 
 $$h(n) =[5,6,0,0,9,2,3,5,6,0,0,8,9,4]$$
-
 $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
 <p align="center">
   <img src="señales.jpeg" width="700">
@@ -41,7 +40,6 @@ $$x(n) =[1,0,2,9,1,4,3,2,6,4,1,1,0,6,2,2,7,7,8,9]$$
 <p align="center">
   <em>Señales</em> 
 </p>
-
 
 Posteriormente, se determinó la longitud de las señales involucradas en el sistema. La señal h[n] corresponde a la respuesta del sistema y está formada por 14 muestras, mientras que la señal x[n] corresponde a la señal de entrada y contiene 20 muestras. A partir de estos valores se calculó la longitud de la señal resultante y[n] De esta forma se obtuvo que la señal resultante tiene 33 muestras. Se realizó el cálculo de la convolución de forma manual utilizando la definición matemática de la convolución discreta $$y[n]=∑x[k]h[n−k].$$ Este procedimiento consiste en calcular la convolución de forma manual utilizando una tabla. En esta tabla se organizaron los desplazamientos de la señal h[n] respecto a la señal x[n], realizando las multiplicaciones entre los valores correspondientes en cada posición. Posteriormente se sumaron los productos obtenidos en cada desplazamiento para calcular cada valor de la señal resultante y[n]. Este método permitió visualizar de manera ordenada el proceso de convolución y facilitar el cálculo de cada término de la secuencia resultante. Tambien se grafico la señal y[n] resultante.
 <p align="center">
@@ -272,11 +270,19 @@ plt.xlim(0, fs/2)
 plt.grid()
 plt.show()
 ```
+Para la visualizacion de esto obtuvinos dos graficas, cambiando las escalas para su mejor comprension.
+<p align="center">
+  <img src="FF.png" width="700">
+</p>
+<p align="center">
+   <em>Transformada Rápida de Fourier</em>
+</p>
+
 <p align="center">
   <img src="FFT.png" width="700">
 </p>
 <p align="center">
-   <em>Transformada Rápida de Fourier </em>
+   <em>Transformada Rápida de Fourier Ampliada </em>
 </p>
 Con el fin de analizar de manera más detallada la distribución de energía de la señal en el dominio de la frecuencia, se calculó la densidad espectral de potencia (PSD) utilizando el método de Welch. Este método divide la señal en segmentos y calcula el espectro promedio, lo cual permite obtener una estimación más estable de la distribución de potencia en las diferentes frecuencias presentes en la señal.
 
